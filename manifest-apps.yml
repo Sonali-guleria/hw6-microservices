@@ -1,0 +1,26 @@
+---
+memory: 950M
+instances: 1
+buildpack: java_buildpack_offline
+env:
+  CF_TARGET: https://api.run.haas-76.pez.pivotal.io
+applications:
+- name: commerce-item-service
+  host: commerce-item-service-sguleria
+  path: commerce-item-service/target/commerce-item-service-0.0.1-SNAPSHOT.jar
+  services:
+  - commerce-config-server
+  - commerce-service-registry
+- name: commerce-price-service
+  host: commerce-price-service-sguleria
+  path: commerce-price-service/target/commerce-price-service-0.0.1-SNAPSHOT.jar
+  services:
+  - commerce-config-server
+  - commerce-service-registry
+- name: commerce-ui
+  host: commerce-ui-sguleria
+  path: commerce-ui/target/commerce-ui-0.0.1-SNAPSHOT.jar
+  services:
+  - commerce-config-server
+  - commerce-service-registry
+  - commerce-circuit-breaker
