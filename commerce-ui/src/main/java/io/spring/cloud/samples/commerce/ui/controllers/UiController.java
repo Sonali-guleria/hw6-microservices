@@ -47,6 +47,10 @@ public class UiController {
     public String getDetailsByItemId(@PathVariable("id") long id) throws JSONException {
   	    return service.getDetailsByItemId(id);
     } 
+
+
+
+
     
 //    public String getByItemId(@PathVariable("id") long id) {
 //  	    return service.getByItemId(id);

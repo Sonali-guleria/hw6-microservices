@@ -28,7 +28,7 @@ import java.util.Random;
 public class ItemProperties {
 
 	  public String getItemFromProperty() {
-		  String error = "No items available.Can't Display the result!";
+		  String error = "<html><h1><font color = red> No items available for you to see.<br><br>Sorry, can't Display the result!</h1></font></html>";
 		  return error;
   }
 	  
